@@ -1,22 +1,14 @@
-// Choose branch based on query string
-var query = window.location.search;
-if (query) {
-    var branch = query.replace("?", "");
-} else {
-    var branch = "main";
-}
- 
-// Load readme content
-$.ajax({
-    url: https://rawgit.com/richjenks/teepee/"+branch+"/readme.md",
-    dataType: 'text',
-    success: function(data) {
- 
-        // Convert readme from markdown to html
-        var converter = new Markdown.Converter();
- 
-        // Show html
-        $(".wrapper").html(converter.makeHtml(data));
- 
-    }
-});
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Générateur de noms de chat</title>
+  </head>
+  <body>
+    <h1>Générateur de noms de chat</h1>
+    <p>Cliquez sur le bouton ci-dessous pour générer un nom de chat aléatoire !</p>
+    <button onclick="genererNom()">Générer un nom de chat</button>
+    <p id="nomChat"></p>
+  </body>
+  <script src="générateur1.js"></script>
+</html>
