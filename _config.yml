@@ -1,0 +1,4 @@
+name: NomChaton
+markdown: redcarpet
+pygments: true
+baseurl: /generator
